@@ -28,7 +28,7 @@ curl -u user:password -X POST http://localhost:8080/api/users \
 4. Удаление пользователя: curl -u user:password -X DELETE http://localhost:8080/api/users/1
 
 ## Структура репозитория 
-
+```
 enterprise-data-service/
 ├── src/
 │ ├── main/
@@ -60,6 +60,7 @@ enterprise-data-service/
 ├── mvnw # Maven wrapper для Unix/Linux систем
 ├── mvnw.cmd # Maven wrapper для Windows систем
 └── README.md # Документация проекта
+```
 ## Технические требования
 
 Язык программирования: Java 17
