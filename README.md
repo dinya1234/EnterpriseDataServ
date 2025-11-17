@@ -30,40 +30,36 @@ curl -u user:password -X POST http://localhost:8080/api/users \
 ## Структура репозитория 
 
 enterprise-data-service/
-│
 ├── src/
-│   ├── main/
-│   │   ├── java/com/example/demo/
-│   │   │   ├── entity/           # Сущности базы данных (JPA entities)
-│   │   │   │   └── User.java     # Модель пользователя
-│   │   │   ├── repository/       # Слой доступа к данным (Spring Data JPA)
-│   │   │   │   └── UserRepository.java # Репозиторий для работы с пользователями
-│   │   │   ├── service/          # Бизнес-логика приложения
-│   │   │   │   └── UserService.java # Сервис с транзакциями
-│   │   │   ├── controller/       # REST API endpoints
-│   │   │   │   └── UserController.java # Контроллер для управления пользователями
-│   │   │   ├── config/           # Конфигурационные классы
-│   │   │   │   └── SecurityConfig.java # Настройки безопасности Spring Security
-│   │   │   └── DemoApplication.java # Главный класс приложения Spring Boot
-│   │   └── resources/            # Ресурсы и конфигурации
-│   │       ├── application.properties     # Основные настройки приложения
-│   │       ├── application-dev.properties # Конфигурация для среды разработки
-│   │       └── application-prod.properties # Конфигурация для продакшн среды
-│   └── test/                     # Тесты приложения
-│       └── java/com/example/demo/
-│           ├── UserServiceTest.java    # Модульные тесты сервиса
-│           └── UserControllerTest.java # Интеграционные тесты контроллера
-│
-├── data/                         # Директория для файлов базы данных H2
-│   └── userdb.mv.db             # Файл базы данных H2 (создается автоматически)
-│
-├── target/                       # Собранные артефакты (генерируется при сборке)
-├── .gitignore                    # Список файлов, игнорируемых Git
-├── pom.xml                       # Конфигурация Maven и зависимости проекта
-├── mvnw                          # Maven wrapper для Unix/Linux систем
-├── mvnw.cmd                      # Maven wrapper для Windows систем
-└── README.md                     # Документация проекта
-
+│ ├── main/
+│ │ ├── java/com/example/demo/
+│ │ │ ├── entity/ # Сущности базы данных (JPA entities)
+│ │ │ │ └── User.java # Модель пользователя
+│ │ │ ├── repository/ # Слой доступа к данным (Spring Data JPA)
+│ │ │ │ └── UserRepository.java # Репозиторий для работы с пользователями
+│ │ │ ├── service/ # Бизнес-логика приложения
+│ │ │ │ └── UserService.java # Сервис с транзакциями
+│ │ │ ├── controller/ # REST API endpoints
+│ │ │ │ └── UserController.java # Контроллер для управления пользователями
+│ │ │ └── config/ # Конфигурационные классы
+│ │ │ └── SecurityConfig.java # Настройки безопасности Spring Security
+│ │ ├── resources/ # Ресурсы и конфигурации
+│ │ │ ├── application.properties # Основные настройки приложения
+│ │ │ ├── application-dev.properties # Конфигурация для среды разработки
+│ │ │ └── application-prod.properties # Конфигурация для продакшн среды
+│ │ └── DemoApplication.java # Главный класс приложения Spring Boot
+│ └── test/
+│ └── java/com/example/demo/
+│ ├── UserServiceTest.java # Модульные тесты сервиса
+│ └── UserControllerTest.java # Интеграционные тесты контроллера
+├── data/ # Директория для файлов базы данных H2
+│ └── userdb.mv.db # Файл базы данных H2 (создается автоматически)
+├── target/ # Собранные артефакты (генерируется при сборке)
+├── .gitignore # Список файлов, игнорируемых Git
+├── pom.xml # Конфигурация Maven и зависимости проекта
+├── mvnw # Maven wrapper для Unix/Linux систем
+├── mvnw.cmd # Maven wrapper для Windows систем
+└── README.md # Документация проекта
 ## Технические требования
 
 Язык программирования: Java 17
